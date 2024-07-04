@@ -143,6 +143,10 @@ table {
   --main-colour-1: rgb(18, 18, 77);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   padding: 12px 24px;
   background-color: var(--main-colour-1);
@@ -170,6 +174,9 @@ h2 {
 }
 
 .recipe-card {
+  display: block;
+  text-decoration: none;
+  color: #444;
   width: 100%;
   max-width: 200px;
   padding: 20px;
