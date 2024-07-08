@@ -237,7 +237,7 @@ h2 {
 
 .recipe-form input {
     height: 32px;
-    color: white;
+    /* color: white; */
 }
 
 .recipe-form input::placeholder,
