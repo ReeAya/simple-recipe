@@ -12,19 +12,20 @@ export function RecipeForm({ onBtnClick }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setFormState(!formState);
+    onBtnClick();
     console.log(ttlState, ingState, stepsState);
     setTTlState("");
     setIngState("");
     setStepsState("");
   }
-  // console.log(formState);
-  //   function toggleState() {
-  //     // setChildState(!childState);
-  //     // console.log(childState);
-  //     // return childState;
-  //     // console.log(props);
-  //     setFormState(!formState);
-  //   }
+
+  function validateForm() {
+    if (ttlState === "" || ingState === "" || stepsState === "") {
+      console.log("Please enter ");
+    }
+  }
+
   return (
     <form onSubmit={handleSubmit} className="recipe-form">
       <p>
@@ -77,11 +78,7 @@ export function RecipeForm({ onBtnClick }) {
         ></textarea>
       </p>
       <div className="btn-area">
-        <button
-          onClick={setFormState}
-          onClick={onBtnClick}
-          className="add-recipe-btn"
-        >
+        <button onClick={validateForm} className="add-recipe-btn">
           Add New Recipe
         </button>
 
@@ -92,6 +89,8 @@ export function RecipeForm({ onBtnClick }) {
     </form>
   );
 }
+
+// onClick={onBtnClick}
 //  onClick={setFormState}
 // onClick={props.onBtnClick}
 /* <button
@@ -101,3 +100,12 @@ export function RecipeForm({ onBtnClick }) {
         >
           Add New Recipe
         </button> */
+//
+// console.log(formState);
+//   function toggleState() {
+//     // setChildState(!childState);
+//     // console.log(childState);
+//     // return childState;
+//     // console.log(props);
+//     setFormState(!formState);
+//   }
