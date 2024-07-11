@@ -260,6 +260,7 @@ h2 {
     border-radius: 8px;
     border: none;
     margin: 0 auto;
+   border: 1px solid var(--main-colour-1);
 }
 
 .btn-area {
